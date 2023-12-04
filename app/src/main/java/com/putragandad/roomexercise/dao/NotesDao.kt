@@ -12,14 +12,14 @@ import com.putragandad.roomexercise.models.Notes
 @Dao
 interface NotesDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(note: Notes)
+    suspend fun insert(notes: Notes)
 
     @Delete
-    suspend fun delete(note: Notes)
+    suspend fun delete(notes: Notes)
 
     @Query("Select * from notesTable order by id ASC")
     fun getAllNotes() : LiveData<List<Notes>>
 
     @Update
-    suspend fun update(note: Notes)
+    suspend fun update(notes: Notes)
 }

@@ -41,7 +41,7 @@ class NotesRVAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.notesTV.setText(allNotes.get(position).noteTitle)
-        holder.datesTV.setText("Last Updated : " + allNotes.get(position).timestamp)
+        holder.datesTV.setText("Last Updated : " + allNotes.get(position).timeStamp)
         holder.deleteIV.setOnClickListener {
             noteClickDeleteInterface.onDeleteIconClick(allNotes.get(position))
         }
