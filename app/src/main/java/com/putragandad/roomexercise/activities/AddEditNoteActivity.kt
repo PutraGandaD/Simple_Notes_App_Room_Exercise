@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.putragandad.roomexercise.R
 import com.putragandad.roomexercise.database.NotesDatabase
 import com.putragandad.roomexercise.models.Notes
@@ -17,7 +18,7 @@ import java.util.Date
 class AddEditNoteActivity : AppCompatActivity() {
     lateinit var noteTitleEdt : EditText
     lateinit var noteEdt: EditText
-    lateinit var saveBtn : Button
+    lateinit var saveBtn : FloatingActionButton
 
     lateinit var viewModel: NotesViewModel
     var noteID = -1
